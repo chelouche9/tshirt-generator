@@ -1,4 +1,4 @@
-import { Flex, HStack, Text } from "@chakra-ui/react";
+import { Flex, HStack, Text, Image } from "@chakra-ui/react";
 
 export default function Header() {
   return (
@@ -22,7 +22,7 @@ export default function Header() {
         borderBottomColor="rgba(18, 18, 18, 0.08)"
       >
         <HStack width="1100px" padding="0 50px" spacing="24px">
-          <Text fontSize="28px">Logo</Text>
+          <Image src="logo.png" alt="logo" width="100px" />
           <Text fontSize="14px">Design T-Shirt</Text>
         </HStack>
       </Flex>

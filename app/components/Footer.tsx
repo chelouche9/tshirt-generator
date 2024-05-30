@@ -19,7 +19,12 @@ export default function Footer() {
         alignItems="center"
         padding="50px"
       >
-        <HStack width="1100px" spacing="24px" justifyContent="space-between">
+        <HStack
+          width={["fit-content", "1100px"]}
+          spacing="24px"
+          justifyContent="space-between"
+          flexDirection={["column", "row"]}
+        >
           <Stack spacing="24px">
             <Text fontSize="18px">Subscribe for updates</Text>
             <HStack spacing="24px">
@@ -33,7 +38,7 @@ export default function Footer() {
                 Subscribe
               </Button>
             </HStack>
-            <Text fontSize="12px">© 2024, wearart.com</Text>
+            <Text fontSize="12px">© 2024, wearmy.design</Text>
           </Stack>
           <HStack spacing="24px">
             {["1", "2", "14", "16", "22"].map((image) => (

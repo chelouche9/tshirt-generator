@@ -15,6 +15,7 @@ export default function Mockups() {
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
+      p="50px"
     >
       <Box maxW="1100px">
         <Stack spacing="24px" textAlign="center">
@@ -25,14 +26,8 @@ export default function Mockups() {
             Follow our simple steps to create your own unique designs.
           </Text>
         </Stack>
-        <Stack
-          spacing="24px"
-          // backgroundColor="gray.50"
-          alignItems="center"
-          // width="100vw"
-          padding="50px"
-        >
-          <SimpleGrid columns={3} spacing="24px">
+        <Stack spacing="24px" alignItems="center" mt="50px">
+          <SimpleGrid columns={[1, 3]} spacing="24px">
             {["1", "2", "3", "4", "5", "6"].map((image) => {
               return (
                 <Box key={image} padding="20px" bgColor="gray.200">

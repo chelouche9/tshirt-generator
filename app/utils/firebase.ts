@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics, setUserId } from "firebase/analytics";
+import { initializeAppCheck, ReCaptchaV3Provider } from "firebase/app-check";
 
 export const firebaseConfig = {
   apiKey: "AIzaSyBvtnXfPCs5y3A6x3ezGXw1_nqyeDrcTZU",
@@ -14,8 +15,9 @@ export const firebaseConfig = {
 
 // Initialize Firebase
 
-if (typeof window !== "undefined" && process.env.NODE_ENV === "development")
+if (typeof window !== "undefined" && process.env.NODE_ENV === "development") {
   (self as any).FIREBASE_APPCHECK_DEBUG_TOKEN = true;
+}
 export const app = initializeApp(firebaseConfig);
 
 // disable analytics in development
@@ -27,3 +29,15 @@ export const setAnalyticsUserId = (userId: string) => {
     setUserId(analytics, userId);
   }
 };
+
+if (typeof window !== "undefined") {
+  initializeAppCheck(app, {
+    provider: new ReCaptchaV3Provider(
+      "6Lcsu-EpAAAAAA6PTfPeBCTCr8xgW7zEr4H4Pg2f"
+    ),
+
+    // Optional argument. If true, the SDK automatically refreshes App Check
+    // tokens as needed.
+    isTokenAutoRefreshEnabled: true,
+  });
+}

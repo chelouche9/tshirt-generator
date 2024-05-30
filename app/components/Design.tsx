@@ -16,6 +16,10 @@ import {
 } from "@chakra-ui/react";
 import { ArrowLeftIcon, CheckIcon } from "@chakra-ui/icons";
 import { useRouter } from "next/navigation";
+import { logEvent } from "firebase/analytics";
+
+import { generateImages, saveImage } from "../utils/api";
+import { analytics } from "../utils/firebase";
 
 interface ImageBoxProps {
   isSelected?: boolean;
@@ -34,8 +38,7 @@ const ImageBox: FC<ImageBoxProps> = ({
     <Box
       border={isSelected ? "dashed 6px teal" : "none"}
       boxSizing="border-box"
-      width="400px"
-      height="400px"
+      width={["100%", "400px"]}
       onClick={() => setSelectedImage(index)}
       cursor="pointer"
       transition={"all 0.3s ease"}
@@ -48,16 +51,29 @@ const ImageBox: FC<ImageBoxProps> = ({
 export default function Hero() {
   const router = useRouter();
 
+  const [prompt, setPrompt] = useState<string>("");
   const [images, setImages] = useState<string[]>([]);
   const [loading, setLoading] = useState(false);
+  const [saveLoading, setSaveLoading] = useState(false);
   const [selectedImage, setSelectedImage] = useState<number>(0);
 
   const onPrompt = async () => {
     setLoading(true);
-    setTimeout(() => {
-      setImages(["test.png", "test.png", "test.png", "test.png"]);
-      setLoading(false);
-    }, 2000);
+    const res = await generateImages({ prompt });
+    const images = res.data.map(
+      (img: any) => `data:image/jpeg;base64,${img.image_base64}`
+    );
+    setImages(images);
+    setLoading(false);
+    logEvent(analytics!, "prompt");
+  };
+
+  const onSelected = async () => {
+    setSaveLoading(true);
+    const path = await saveImage(images[selectedImage]);
+    setSaveLoading(false);
+    router.push(`tshirt?design=${path}`);
+    logEvent(analytics!, "select_image");
   };
 
   const onReset = () => {
@@ -70,18 +86,22 @@ export default function Hero() {
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
-      //   padding="50px"
+      padding="50px"
       backgroundColor="gray.50"
+      id="start"
     >
       <Stack spacing="24px" maxW="1100px" textAlign="center">
-        <Heading as="h3" mt="50px">
-          Start With A Prompt
-        </Heading>
+        <Heading as="h3">Start With A Prompt</Heading>
         <Text>
           Choose a prompt that speaks to you. We&apos;ll guide you through the
           rest.
         </Text>
-        <Textarea width="100%" placeholder="Try anything you have in mind" />
+        <Textarea
+          width="100%"
+          placeholder="Try anything you have in mind"
+          value={prompt}
+          onChange={(e) => setPrompt(e.target.value)}
+        />
         <Button
           colorScheme="teal"
           isLoading={loading}
@@ -101,7 +121,7 @@ export default function Hero() {
         >
           <Heading as="h3">Your Masterpieces</Heading>
           <Box>Choose an Image</Box>
-          <SimpleGrid columns={2} spacing="24px">
+          <SimpleGrid columns={[1, 2]} spacing="24px">
             {images.map((image, i) => (
               <ImageBox
                 key={i}
@@ -112,11 +132,16 @@ export default function Hero() {
               />
             ))}
           </SimpleGrid>
-          <HStack spacing="24px" flex={1} mt="24px">
+          <HStack
+            flexDirection={["column-reverse", "row"]}
+            spacing="24px"
+            flex={1}
+            mt="24px"
+          >
             <Button
               colorScheme="teal"
               onClick={onReset}
-              variant="outline"
+              variant="ghost"
               leftIcon={<ArrowLeftIcon />}
               flex={1}
               size="lg"
@@ -129,7 +154,8 @@ export default function Hero() {
               size="lg"
               width="300px"
               leftIcon={<CheckIcon />}
-              onClick={() => router.push("/tshirt?design=1231231")}
+              isLoading={saveLoading}
+              onClick={() => onSelected()}
             >
               Continue
             </Button>

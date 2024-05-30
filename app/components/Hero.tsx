@@ -1,3 +1,4 @@
+"use client";
 import { Button, Heading, Stack, Text } from "@chakra-ui/react";
 
 export default function Hero() {
@@ -21,7 +22,17 @@ export default function Hero() {
       <Text w="100%" textAlign="center" fontSize="16px" color="white">
         Create Your T-Shirt design with AI
       </Text>
-      <Button variant="outline" colorScheme="whiteAlpha" size="lg">
+      <Button
+        variant="outline"
+        colorScheme="whiteAlpha"
+        size="lg"
+        onClick={() => {
+          const targetElement = document.getElementById("start");
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: "smooth" });
+          }
+        }}
+      >
         Design Now
       </Button>
     </Stack>
