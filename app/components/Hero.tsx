@@ -1,7 +1,10 @@
 "use client";
 import { Button, Heading, Stack, Text } from "@chakra-ui/react";
+import { useRouter } from "next/navigation";
 
 export default function Hero() {
+  const router = useRouter();
+
   return (
     <Stack
       bgImage="bg1.jpg"
@@ -26,12 +29,7 @@ export default function Hero() {
         variant="outline"
         colorScheme="whiteAlpha"
         size="lg"
-        onClick={() => {
-          const targetElement = document.getElementById("start");
-          if (targetElement) {
-            targetElement.scrollIntoView({ behavior: "smooth" });
-          }
-        }}
+        onClick={() => router.push(`design`)}
       >
         Design Now
       </Button>

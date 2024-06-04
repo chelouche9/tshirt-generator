@@ -1,0 +1,226 @@
+[debug] [2024-06-04T19:17:26.440Z] ----------------------------------------------------------------------
+[debug] [2024-06-04T19:17:26.443Z] Command:       /Users/yonatanchelouche/.nvm/versions/node/v20.12.0/bin/node /Users/yonatanchelouche/.nvm/versions/node/v20.12.0/bin/firebase emulators:start --only functions
+[debug] [2024-06-04T19:17:26.443Z] CLI Version:   13.9.0
+[debug] [2024-06-04T19:17:26.443Z] Platform:      darwin
+[debug] [2024-06-04T19:17:26.443Z] Node Version:  v20.12.0
+[debug] [2024-06-04T19:17:26.444Z] Time:          Tue Jun 04 2024 15:17:26 GMT-0400 (Eastern Daylight Time)
+[debug] [2024-06-04T19:17:26.444Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-06-04T19:17:26.450Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2024-06-04T19:17:26.586Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-06-04T19:17:26.586Z] > authorizing via signed-in user (yonatanshlush@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2024-06-04T19:17:27.257Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-06-04T19:17:27.257Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-06-04T19:17:27.262Z] [hub] writing locator at /var/folders/9j/gjx7z77n0dd8xnl7nyml5_bc0000gn/T/hub-tshirt-generator.json
+[debug] [2024-06-04T19:17:27.280Z] > refreshing access token with scopes: []
+[debug] [2024-06-04T19:17:27.281Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-06-04T19:17:27.281Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-06-04T19:17:27.385Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2024-06-04T19:17:27.385Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2024-06-04T19:17:27.424Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-06-04T19:17:27.424Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-06-04T19:17:27.457Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tshirt-generator [none]
+[debug] [2024-06-04T19:17:27.835Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tshirt-generator 200
+[debug] [2024-06-04T19:17:27.835Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tshirt-generator {"projectId":"tshirt-generator","projectNumber":"430451629726","displayName":"tshirt-generator","name":"projects/tshirt-generator","resources":{"hostingSite":"tshirt-generator","storageBucket":"tshirt-generator.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_905c7601-8367-486a-bf87-6989ebc509da"}
+[debug] [2024-06-04T19:17:28.248Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-06-04T19:17:28.248Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-06-04T19:17:28.248Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage, dataconnect\u001b[22m"}}
+[debug] [2024-06-04T19:17:28.251Z] defaultcredentials: writing to file /Users/yonatanchelouche/.config/firebase/yonatanshlush_gmail_com_application_default_credentials.json
+[debug] [2024-06-04T19:17:28.256Z] Setting GAC to /Users/yonatanchelouche/.config/firebase/yonatanshlush_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/yonatanchelouche/.config/firebase/yonatanshlush_gmail_com_application_default_credentials.json"}}
+[debug] [2024-06-04T19:17:28.256Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tshirt-generator/adminSdkConfig [none]
+[debug] [2024-06-04T19:17:28.757Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tshirt-generator/adminSdkConfig 200
+[debug] [2024-06-04T19:17:28.757Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tshirt-generator/adminSdkConfig {"projectId":"tshirt-generator","storageBucket":"tshirt-generator.appspot.com","locationId":"us-central"}
+[debug] [2024-06-04T19:17:28.796Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-06-04T19:17:28.796Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-06-04T19:17:28.796Z] Starting Emulator UI with command {"binary":"node","args":["/Users/yonatanchelouche/.cache/firebase/emulators/ui-v1.11.8/server/server.mjs"],"optionalArgs":[],"joinArgs":false,"shell":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/yonatanchelouche/.cache/firebase/emulators/ui-v1.11.8/server/server.mjs\"],\"optionalArgs\":[],\"joinArgs\":false,\"shell\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2024-06-04T19:17:28.957Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2024-06-04T19:17:28.958Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "/Users/yonatanchelouche/tshirt-generator/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/yonatanchelouche/tshirt-generator/functions\" for Cloud Functions..."}}
+[debug] [2024-06-04T19:17:29.010Z] Validating nodejs source
+[debug] [2024-06-04T19:17:31.246Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^5.0.0",
+    "stripe": "^15.6.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-06-04T19:17:31.247Z] Building nodejs source
+[debug] [2024-06-04T19:17:31.247Z] Failed to find version of module node: reached end of search path /Users/yonatanchelouche/tshirt-generator/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[info] i  functions: Loaded environment variables from .env, .env.local. 
+[debug] [2024-06-04T19:17:31.268Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-06-04T19:17:31.280Z] Found firebase-functions binary at '/Users/yonatanchelouche/tshirt-generator/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8820
+
+[debug] [2024-06-04T19:17:33.846Z] Got response from /__/functions.yaml {"endpoints":{"generateImages":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"generateImages"},"order":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"order"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2024-06-04T19:17:37.188Z] File /Users/yonatanchelouche/tshirt-generator/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/yonatanchelouche/tshirt-generator/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2024-06-04T19:17:37.188Z] File /Users/yonatanchelouche/tshirt-generator/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/yonatanchelouche/tshirt-generator/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2024-06-04T19:17:38.188Z] Validating nodejs source
+[debug] [2024-06-04T19:17:38.978Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^5.0.0",
+    "stripe": "^15.6.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-06-04T19:17:38.978Z] Building nodejs source
+[debug] [2024-06-04T19:17:38.978Z] Failed to find version of module node: reached end of search path /Users/yonatanchelouche/tshirt-generator/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[info] i  functions: Loaded environment variables from .env, .env.local. 
+[debug] [2024-06-04T19:17:38.981Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-06-04T19:17:38.982Z] Found firebase-functions binary at '/Users/yonatanchelouche/tshirt-generator/functions/node_modules/.bin/firebase-functions'
+[info] ✔  functions: Loaded functions definitions from source: generateImages, order. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: generateImages, order."}}
+[info] ✔  functions[us-central1-generateImages]: http function initialized (http://127.0.0.1:5001/tshirt-generator/us-central1/generateImages). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/tshirt-generator/us-central1/generateImages)."}}
+[info] ✔  functions[us-central1-order]: http function initialized (http://127.0.0.1:5001/tshirt-generator/us-central1/order). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/tshirt-generator/us-central1/order)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[info] Serving at port 8795
+
+[debug] [2024-06-04T19:17:39.416Z] Got response from /__/functions.yaml {"endpoints":{"generateImages":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"generateImages"},"order":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"order"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: generateImages, order. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: generateImages, order."}}
+[debug] [2024-06-04T19:28:12.470Z] [work-queue] {"queuedWork":["/tshirt-generator/us-central1/generateImages-2024-06-04T19:28:12.464Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-06-04T19:28:12.496Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/tshirt-generator/us-central1/generateImages-2024-06-04T19:28:12.464Z"],"workRunningCount":1}
+[debug] [2024-06-04T19:28:12.502Z] Accepted request OPTIONS /tshirt-generator/us-central1/generateImages --> us-central1-generateImages
+[debug] [2024-06-04T19:28:12.538Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-06-04T19:28:12.544Z] [functions] Got req.url=/tshirt-generator/us-central1/generateImages, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/tshirt-generator/us-central1/generateImages, mapping to path=/"}}
+[info] i  functions: Loaded environment variables from .env, .env.local. 
+[debug] [2024-06-04T19:28:12.575Z] [worker-pool] addWorker(us-central1-generateImages) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-generateImages)"}}
+[debug] [2024-06-04T19:28:12.577Z] [worker-pool] Adding worker with key us-central1-generateImages, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-generateImages, total=1"}}
+[debug] [2024-06-04T19:28:15.562Z] [runtime-status] [89097] Resolved module firebase-admin {"declared":true,"installed":true,"version":"12.1.0","resolution":"/Users/yonatanchelouche/tshirt-generator/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"[runtime-status] [89097] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"12.1.0\",\"resolution\":\"/Users/yonatanchelouche/tshirt-generator/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2024-06-04T19:28:15.563Z] [runtime-status] [89097] Resolved module firebase-functions {"declared":true,"installed":true,"version":"5.0.1","resolution":"/Users/yonatanchelouche/tshirt-generator/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"[runtime-status] [89097] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"5.0.1\",\"resolution\":\"/Users/yonatanchelouche/tshirt-generator/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-06-04T19:28:15.564Z] [runtime-status] [89097] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"[runtime-status] [89097] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2024-06-04T19:28:15.564Z] [runtime-status] [89097] Resolved module firebase-functions {"declared":true,"installed":true,"version":"5.0.1","resolution":"/Users/yonatanchelouche/tshirt-generator/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"[runtime-status] [89097] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"5.0.1\",\"resolution\":\"/Users/yonatanchelouche/tshirt-generator/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-06-04T19:28:16.379Z] [runtime-status] [89097] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"[runtime-status] [89097] Checked functions.config() {\"config\":{}}"}}
+[debug] [2024-06-04T19:28:16.380Z] [runtime-status] [89097] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"5.0.1","resolution":"/Users/yonatanchelouche/tshirt-generator/functions/node_modules/firebase-functions/lib/v1/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"[runtime-status] [89097] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"5.0.1\",\"resolution\":\"/Users/yonatanchelouche/tshirt-generator/functions/node_modules/firebase-functions/lib/v1/index.js\"}}"}}
+[debug] [2024-06-04T19:28:16.381Z] [runtime-status] [89097] Resolved module firebase-functions {"declared":true,"installed":true,"version":"5.0.1","resolution":"/Users/yonatanchelouche/tshirt-generator/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"[runtime-status] [89097] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"5.0.1\",\"resolution\":\"/Users/yonatanchelouche/tshirt-generator/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-06-04T19:28:16.381Z] [runtime-status] [89097] Resolved module firebase-admin {"declared":true,"installed":true,"version":"12.1.0","resolution":"/Users/yonatanchelouche/tshirt-generator/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"[runtime-status] [89097] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"12.1.0\",\"resolution\":\"/Users/yonatanchelouche/tshirt-generator/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2024-06-04T19:28:16.385Z] [runtime-status] [89097] Resolved module firebase-functions {"declared":true,"installed":true,"version":"5.0.1","resolution":"/Users/yonatanchelouche/tshirt-generator/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"[runtime-status] [89097] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"5.0.1\",\"resolution\":\"/Users/yonatanchelouche/tshirt-generator/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-06-04T19:28:16.385Z] [runtime-status] [89097] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"12.1.0","resolution":"/Users/yonatanchelouche/tshirt-generator/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"[runtime-status] [89097] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"12.1.0\",\"resolution\":\"/Users/yonatanchelouche/tshirt-generator/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2024-06-04T19:28:16.583Z] [runtime-status] [89097] initializeApp(DEFAULT) {"storageBucket":"tshirt-generator.appspot.com","projectId":"tshirt-generator"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"[runtime-status] [89097] initializeApp(DEFAULT) {\"storageBucket\":\"tshirt-generator.appspot.com\",\"projectId\":\"tshirt-generator\"}"}}
+[debug] [2024-06-04T19:28:16.590Z] [runtime-status] [89097] Functions runtime initialized. {"cwd":"/Users/yonatanchelouche/tshirt-generator/functions","node_version":"20.12.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"[runtime-status] [89097] Functions runtime initialized. {\"cwd\":\"/Users/yonatanchelouche/tshirt-generator/functions\",\"node_version\":\"20.12.0\"}"}}
+[debug] [2024-06-04T19:28:16.590Z] [runtime-status] [89097] Listening to port: /var/folders/9j/gjx7z77n0dd8xnl7nyml5_bc0000gn/T/fire_emu_a58d0eafb6d4f7e1.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"[runtime-status] [89097] Listening to port: /var/folders/9j/gjx7z77n0dd8xnl7nyml5_bc0000gn/T/fire_emu_a58d0eafb6d4f7e1.sock"}}
+[debug] [2024-06-04T19:28:16.678Z] [worker-us-central1-generateImages-93417b9b-6109-4bd3-991a-5d472df8c12a]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"[worker-us-central1-generateImages-93417b9b-6109-4bd3-991a-5d472df8c12a]: IDLE"}}
+[debug] [2024-06-04T19:28:16.678Z] [worker-pool] submitRequest(triggerId=us-central1-generateImages) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-generateImages)"}}
+[info] i  functions: Beginning execution of "us-central1-generateImages" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"Beginning execution of \"us-central1-generateImages\""}}
+[debug] [2024-06-04T19:28:16.679Z] [worker-us-central1-generateImages-93417b9b-6109-4bd3-991a-5d472df8c12a]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"[worker-us-central1-generateImages-93417b9b-6109-4bd3-991a-5d472df8c12a]: BUSY"}}
+[debug] [2024-06-04T19:28:16.684Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-generateImages" in 5.769475ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"Finished \"us-central1-generateImages\" in 5.769475ms"}}
+[debug] [2024-06-04T19:28:16.686Z] [worker-us-central1-generateImages-93417b9b-6109-4bd3-991a-5d472df8c12a]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"[worker-us-central1-generateImages-93417b9b-6109-4bd3-991a-5d472df8c12a]: IDLE"}}
+[debug] [2024-06-04T19:28:16.686Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-06-04T19:28:16.686Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-06-04T19:28:16.688Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-06-04T19:28:16.689Z] [work-queue] {"queuedWork":["/tshirt-generator/us-central1/generateImages-2024-06-04T19:28:16.689Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-06-04T19:28:16.689Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/tshirt-generator/us-central1/generateImages-2024-06-04T19:28:16.689Z"],"workRunningCount":1}
+[debug] [2024-06-04T19:28:16.689Z] Accepted request POST /tshirt-generator/us-central1/generateImages --> us-central1-generateImages
+[debug] [2024-06-04T19:28:16.691Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-06-04T19:28:16.692Z] [functions] Got req.url=/tshirt-generator/us-central1/generateImages, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/tshirt-generator/us-central1/generateImages, mapping to path=/"}}
+[debug] [2024-06-04T19:28:16.692Z] [worker-pool] submitRequest(triggerId=us-central1-generateImages) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-generateImages)"}}
+[info] i  functions: Beginning execution of "us-central1-generateImages" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"Beginning execution of \"us-central1-generateImages\""}}
+[debug] [2024-06-04T19:28:16.692Z] [worker-us-central1-generateImages-93417b9b-6109-4bd3-991a-5d472df8c12a]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"[worker-us-central1-generateImages-93417b9b-6109-4bd3-991a-5d472df8c12a]: BUSY"}}
+[info] >  {"verifications":{"app":"VALID","auth":"MISSING"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"} {"user":{"verifications":{"app":"VALID","auth":"MISSING"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"verifications\":{\"app\":\"VALID\",\"auth\":\"MISSING\"},\"logging.googleapis.com/labels\":{\"firebase-log-type\":\"callable-request-verification\"},\"severity\":\"DEBUG\",\"message\":\"Callable request verification passed\"}"}}
+[debug] [2024-06-04T19:28:36.059Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-generateImages" in 19367.246587ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"Finished \"us-central1-generateImages\" in 19367.246587ms"}}
+[debug] [2024-06-04T19:28:36.061Z] [worker-us-central1-generateImages-93417b9b-6109-4bd3-991a-5d472df8c12a]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"[worker-us-central1-generateImages-93417b9b-6109-4bd3-991a-5d472df8c12a]: IDLE"}}
+[debug] [2024-06-04T19:28:36.061Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-06-04T19:28:36.061Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-06-04T19:28:36.062Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-06-04T19:41:23.601Z] [work-queue] {"queuedWork":["/tshirt-generator/us-central1/generateImages-2024-06-04T19:41:23.591Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-06-04T19:41:23.614Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/tshirt-generator/us-central1/generateImages-2024-06-04T19:41:23.591Z"],"workRunningCount":1}
+[debug] [2024-06-04T19:41:23.615Z] Accepted request OPTIONS /tshirt-generator/us-central1/generateImages --> us-central1-generateImages
+[debug] [2024-06-04T19:41:23.653Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-06-04T19:41:23.655Z] [functions] Got req.url=/tshirt-generator/us-central1/generateImages, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/tshirt-generator/us-central1/generateImages, mapping to path=/"}}
+[debug] [2024-06-04T19:41:23.657Z] [worker-pool] submitRequest(triggerId=us-central1-generateImages) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-generateImages)"}}
+[info] i  functions: Beginning execution of "us-central1-generateImages" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"Beginning execution of \"us-central1-generateImages\""}}
+[debug] [2024-06-04T19:41:23.664Z] [worker-us-central1-generateImages-93417b9b-6109-4bd3-991a-5d472df8c12a]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"[worker-us-central1-generateImages-93417b9b-6109-4bd3-991a-5d472df8c12a]: BUSY"}}
+[debug] [2024-06-04T19:41:23.775Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-generateImages" in 113.521147ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"Finished \"us-central1-generateImages\" in 113.521147ms"}}
+[debug] [2024-06-04T19:41:23.780Z] [worker-us-central1-generateImages-93417b9b-6109-4bd3-991a-5d472df8c12a]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"[worker-us-central1-generateImages-93417b9b-6109-4bd3-991a-5d472df8c12a]: IDLE"}}
+[debug] [2024-06-04T19:41:23.781Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-06-04T19:41:23.781Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-06-04T19:41:23.782Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-06-04T19:41:23.787Z] [work-queue] {"queuedWork":["/tshirt-generator/us-central1/generateImages-2024-06-04T19:41:23.787Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-06-04T19:41:23.788Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/tshirt-generator/us-central1/generateImages-2024-06-04T19:41:23.787Z"],"workRunningCount":1}
+[debug] [2024-06-04T19:41:23.788Z] Accepted request POST /tshirt-generator/us-central1/generateImages --> us-central1-generateImages
+[debug] [2024-06-04T19:41:23.793Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-06-04T19:41:23.795Z] [functions] Got req.url=/tshirt-generator/us-central1/generateImages, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/tshirt-generator/us-central1/generateImages, mapping to path=/"}}
+[debug] [2024-06-04T19:41:23.796Z] [worker-pool] submitRequest(triggerId=us-central1-generateImages) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-generateImages)"}}
+[info] i  functions: Beginning execution of "us-central1-generateImages" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"Beginning execution of \"us-central1-generateImages\""}}
+[debug] [2024-06-04T19:41:23.797Z] [worker-us-central1-generateImages-93417b9b-6109-4bd3-991a-5d472df8c12a]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"[worker-us-central1-generateImages-93417b9b-6109-4bd3-991a-5d472df8c12a]: BUSY"}}
+[info] >  {"verifications":{"app":"VALID","auth":"MISSING"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"} {"user":{"verifications":{"app":"VALID","auth":"MISSING"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"verifications\":{\"app\":\"VALID\",\"auth\":\"MISSING\"},\"logging.googleapis.com/labels\":{\"firebase-log-type\":\"callable-request-verification\"},\"severity\":\"DEBUG\",\"message\":\"Callable request verification passed\"}"}}
+[debug] [2024-06-04T19:41:49.506Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-generateImages" in 25709.191217ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"Finished \"us-central1-generateImages\" in 25709.191217ms"}}
+[debug] [2024-06-04T19:41:49.507Z] [worker-us-central1-generateImages-93417b9b-6109-4bd3-991a-5d472df8c12a]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"[worker-us-central1-generateImages-93417b9b-6109-4bd3-991a-5d472df8c12a]: IDLE"}}
+[debug] [2024-06-04T19:41:49.507Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-06-04T19:41:49.507Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateImages"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-06-04T19:41:49.507Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
