@@ -68,6 +68,9 @@ export const order = onCall(
       },
       mode: "payment",
       success_url: "https://wearmy.design/success",
+      shipping_address_collection: {
+        allowed_countries: ["US"],
+      },
     });
 
     return { url: session.url };
